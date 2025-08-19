@@ -1,6 +1,22 @@
+:root {
+    --system-ui: system-ui, 
+                 "Segoe UI", 
+                 Roboto, 
+                 Helvetica, 
+                 Arial, 
+                 sans-serif, 
+                 "Apple Color Emoji", 
+                 "Segoe UI Emoji", 
+                 "Segoe UI Symbol";
+}
+
+/* Temporary: */
+* {
+    /* border: 2px solid red; */
+}
+
 body {
-    background-color: #2b2c2c;
-    color: aliceblue;
+    font-family: var(--system-ui);    
 }
 
 .container {
@@ -13,17 +29,72 @@ body {
         "sidebar main-content";
 }
 
-.sidebar {
+#sidebar {
     grid-area: sidebar;
-    background-color: #599b4c;
+    background-color: #459cce;
+    padding: 32px;
+    color: #fff;
+    display: grid;
+    grid-template-rows: 4rem 16rem 1fr;
+    align-items: start;
+    gap: 32px;
+
+    .navigation {
+        display: grid;
+        grid-template-columns: 2rem 1fr;
+        column-gap: 16px;
+        grid-auto-rows: 40px;
+        align-items: center;
+        font-size: 1.15rem;
+        font-weight: 600;
+
+        img {
+            width: 1.75rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
 }
 
-.header {
+#branding {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    gap: 8px;
+    
+    img {
+        width: 50px;
+    }
+
+    span {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
+
+#pages {
+    /* grid-template: repeat(6, 1fr) / 1fr; */
+}
+
+#info {
+    /* grid-template-columns: 1fr;
+    grid-auto-rows: 2rem;
+    align-items: center; */
+}
+
+#header {
     grid-area: header;
     background-color: #d64949;
+    color: aliceblue;
+    border: 4px solid #fff;
 }
 
-.main-content {
+#main-content {
     grid-area: main-content;
     background-color: #3838be;
+    color: aliceblue;
+    border: 4px solid #fff;
 }
