@@ -13,24 +13,6 @@
     --secondary-color: #e6c844;
 }
 
-/* === Temporary: === */
-* {
-    /* border: 2px solid red; */
-    /* #header, #main-content {
-        background-color: #353535 !important;
-        color: aliceblue !important;
-    }
-
-    #main-content .card,
-    #projects .content,
-    #trending .content {
-        background-color: #525252 !important;
-        color: aliceblue !important;
-    } */
-}
-/* ==== */
-
-
 body {
     font-family: var(--system-ui);
 }
@@ -65,13 +47,13 @@ body {
         font-size: 1.15rem;
         font-weight: 600;
 
-        img {
+        .icon {
             width: 1.75rem;
+            cursor: pointer;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
+        span {
+            cursor: pointer;
         }
     }
 }
@@ -129,6 +111,7 @@ body {
 
     .icon {
         width: 28px;
+        cursor: pointer;
     }
 
     .user-name {
@@ -187,7 +170,8 @@ body {
         background-color: var(--primary-color);
         color: #fff;
         font-weight: 600;
-
+        cursor: pointer;
+        
         &:hover {
             background-color: var(--primary-color-hover);
         }
@@ -244,6 +228,10 @@ body {
             align-items: center;
             justify-items: center;
             justify-content: end;
+
+            .icon {
+                cursor: pointer;
+            }
         }
     }
 }
@@ -312,3 +300,24 @@ body {
         }
     }
 }
+
+
+/* === Temporary: === */
+* {
+    /* border: 2px solid red; */
+
+    /* #header, #main-content {
+        background-color: #353535 !important;
+        color: aliceblue !important;
+    }
+
+    #main-content .card,
+    #projects .content,
+    #trending .content,
+    #announcements .content,
+    .search-bar {
+        background-color: #525252 !important;
+        color: aliceblue !important;
+    } */
+}
+/* ==== */
