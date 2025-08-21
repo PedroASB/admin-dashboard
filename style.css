@@ -7,7 +7,8 @@
                  sans-serif, 
                  "Apple Color Emoji", 
                  "Segoe UI Emoji", 
-                 "Segoe UI Symbol";
+                 "Segoe UI Symbol",
+                 "Noto Color Emoji";
     --primary-color: #459cce;
     --primary-color-hover: #6ab3dd;
     --secondary-color: #e6c844;
@@ -132,13 +133,25 @@ body {
     grid-column-start: 1;
     grid-row-start: 2;
     grid-template-columns: 90px 1fr;
-    grid-template-rows: 50px 50px;
+    grid-template-rows: 40px 40px 20px;
     align-items: center;
     gap: 0 16px;
+    position: relative;
+    background-color: inherit;
 
     .user-image {
         grid-column-start: 1;
         grid-row: 1 / -1;
+    }
+
+    .status-icon {
+        position: absolute;
+        top: 5px;
+        left: 72px;
+    }
+
+    .status {
+        font-size: 0.9rem;
     }
 
     .text {
@@ -284,10 +297,19 @@ body {
         grid-template-rows: 30px 30px;
         align-items: center;
         gap: 0 16px;
+        position: relative;
+        background-color: inherit;
         
         .user-image {
             grid-column-start: 1;
             grid-row: 1 / -1;
+        }
+
+        .status-icon {
+            position: absolute;
+            top: 0px;
+            left: 45px;
+            font-size: 0.9rem;
         }
 
         .nickname {
@@ -301,6 +323,11 @@ body {
     }
 }
 
+#projects .card,
+#announcements .content,
+#trending .content {
+    box-shadow: 0 4px 5px #d1d7df;
+}
 
 /* === Temporary: === */
 * {
