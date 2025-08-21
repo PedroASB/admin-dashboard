@@ -18,11 +18,32 @@
                  "Segoe UI Emoji", 
                  "Segoe UI Symbol",
                  "Noto Color Emoji";
+}
+
+:root.light-theme {
     --primary-color: #459cce;
     --primary-color-hover: #6ab3dd;
     --secondary-color: #e6c844;
+    
     --font-color: #202020;
     --lighter-font-color: #3b3b3b;
+    --bg-color-1: #fff;
+    --bg-color-2: #e8eff7;
+    --shadow-color: #d8d8d8;
+    --img-border-color: rgba(60, 60, 60, 0.25);
+}
+
+:root.dark-theme {
+    --primary-color: #3f5f74;
+    --primary-color-hover: #44728f;
+    --secondary-color: #a08a2b;
+
+    --font-color: #fff;
+    --lighter-font-color: #e2e2e2;
+    --bg-color-1: #525252;
+    --bg-color-2: #383838;
+    --shadow-color: #303030;
+    --img-border-color: rgba(120, 120, 120, 0.25);
 }
 
 body {
@@ -92,8 +113,8 @@ body {
     grid-area: header;
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
-    background-color: #fff;
-    box-shadow: 0 4px 5px #d8d8d8;
+    background-color: var(--bg-color-1);
+    box-shadow: 0 4px 5px var(--shadow-color);
     z-index: 1;
     padding: 8px 64px 16px 64px;
     text-wrap: nowrap;
@@ -103,7 +124,7 @@ body {
     display: grid;
     grid-column: 1 / -1;
     grid-row-start: 1;
-    grid-template-columns: 40px 1fr 40px 60px auto;
+    grid-template-columns: 40px 1fr 40px 40px 60px auto;
     align-items: center;
     justify-items: center;
     column-gap: 16px;
@@ -137,7 +158,7 @@ body {
 
 .user-image {
     border-radius: 50%;
-    border: 2px solid rgba(60, 60, 60, 0.25);
+    border: 2px solid var(--img-border-color);
 }
 
 #user-info {
@@ -207,7 +228,7 @@ body {
 
 #main-content {
     grid-area: main-content;
-    background-color: #e8eff7;
+    background-color: var(--bg-color-2);
     padding: 32px;
     display: grid;
     grid-template-rows: auto 1fr;
@@ -237,7 +258,6 @@ body {
         display: grid;
         grid-template-rows: 20px 1fr 30px;
         gap: 8px;
-        background-color: #fff;
         padding: 32px 16px;
         border-radius: 8px;
         border-left: 8px solid var(--secondary-color);
@@ -274,7 +294,6 @@ body {
 
 #announcements .content {
     display: grid;
-    background-color: #fff;
     padding: 32px;
     border-radius: 8px;
     gap: 24px;
@@ -306,7 +325,6 @@ body {
 
 #trending .content {
     display: grid;
-    background-color: #fff;
     gap: 32px;
     padding: 24px;
     border-radius: 8px;
@@ -347,29 +365,6 @@ body {
 #projects .card,
 #announcements .content,
 #trending .content {
-    box-shadow: 0 4px 5px #d1d7df;
+    background-color: var(--bg-color-1);
+    box-shadow: 0 4px 5px var(--shadow-color);
 }
-
-/* === Temporary: === */
-* {
-    /* border: 2px solid red; */
-}
-
-/* #header, #main-content {
-    background-color: #353535 !important;
-}
-
-#main-content .card,
-#projects .content,
-#trending .content,
-#announcements .content,
-.search-bar {
-    background-color: #525252 !important;
-}
-
-:root {
-    --font-color: #fff !important;
-    --lighter-font-color: #dddddd !important;
-} */
-
-/* ==== */

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light-theme">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -40,9 +41,10 @@
 
         <div id="header">
             <div id="header-top">
-                <img src="./assets/icons/search-icon.svg" alt="Search" class="icon">
+                <img src="./assets/icons/search-icon-black.svg" alt="Search" class="icon search-icon">
                 <input type="text" class="search-bar" placeholder="Search">
-                <img src="./assets/icons/notifications-icon.svg" alt="See notifications" class="icon">
+                <img src="./assets/icons/light-theme-icon.svg" alt="Switch theme between light/dark mode" class="icon" id="theme-switcher">
+                <img src="./assets/icons/notifications-icon-black.svg" alt="See notifications" class="icon notifications-icon">
                 <img src="./assets/imgs/nikola-tesla.jpeg" alt="User Image" class="user-image">
                 <div class="user-name">Nikola Tesla</div>
             </div>
@@ -70,9 +72,9 @@
                             A physics-driven playground that visualizes arcs leaping from a Tesla coil. Adjustable voltage sliders, realistic sound effects, and just enough danger to make you wonder if your monitor should've come with a Faraday cage.
                         </div>
                         <div class="options">
-                            <img src="./assets/icons/star-icon.svg" alt="Add to favorites" class="icon">
-                            <img src="./assets/icons/eye-icon.svg" alt="Watch" class="icon">
-                            <img src="./assets/icons/pin-icon.svg" alt="Pin" class="icon">
+                            <img src="./assets/icons/star-icon-black.svg" alt="Add to favorites" class="icon star-icon">
+                            <img src="./assets/icons/eye-icon-black.svg" alt="Watch" class="icon eye-icon">
+                            <img src="./assets/icons/pin-icon-black.svg" alt="Pin" class="icon pin-icon">
                         </div>
                     </div>
                     <div class="card">
@@ -81,9 +83,9 @@
                             A JavaScript library that strikes your DOM with lightning bolts on demand. One function call, endless static energy. Subtle enough for UI effects, powerful enough to make your users feel slightly unsafe.
                         </div>
                         <div class="options">
-                            <img src="./assets/icons/star-icon.svg" alt="Add to favorites" class="icon">
-                            <img src="./assets/icons/eye-icon.svg" alt="Watch" class="icon">
-                            <img src="./assets/icons/pin-icon.svg" alt="Pin" class="icon">
+                            <img src="./assets/icons/star-icon-black.svg" alt="Add to favorites" class="icon star-icon">
+                            <img src="./assets/icons/eye-icon-black.svg" alt="Watch" class="icon eye-icon">
+                            <img src="./assets/icons/pin-icon-black.svg" alt="Pin" class="icon pin-icon">
                         </div>
                     </div>
                     <div class="card">
@@ -92,9 +94,9 @@
                             A cross-platform tool to flip seamlessly between alternating and direct flows. Ideal for devs who can't decide which current they're on. No guitar riffs built in-though the naming collision was entirely intentional.
                         </div>
                         <div class="options">
-                            <img src="./assets/icons/star-icon.svg" alt="Add to favorites" class="icon">
-                            <img src="./assets/icons/eye-icon.svg" alt="Watch" class="icon">
-                            <img src="./assets/icons/pin-icon.svg" alt="Pin" class="icon">
+                            <img src="./assets/icons/star-icon-black.svg" alt="Add to favorites" class="icon star-icon">
+                            <img src="./assets/icons/eye-icon-black.svg" alt="Watch" class="icon eye-icon">
+                            <img src="./assets/icons/pin-icon-black.svg" alt="Pin" class="icon pin-icon">
                         </div>
                     </div>
                     <div class="card">
@@ -103,9 +105,9 @@
                             An experimental sound generator that translates voltage values into rhythmic pulses. Your console logs become dance tracks, proving that electricity has always had a beat-humans just tuned in late.
                         </div>
                         <div class="options">
-                            <img src="./assets/icons/star-icon.svg" alt="Add to favorites" class="icon">
-                            <img src="./assets/icons/eye-icon.svg" alt="Watch" class="icon">
-                            <img src="./assets/icons/pin-icon.svg" alt="Pin" class="icon">
+                            <img src="./assets/icons/star-icon-black.svg" alt="Add to favorites" class="icon star-icon">
+                            <img src="./assets/icons/eye-icon-black.svg" alt="Watch" class="icon eye-icon">
+                            <img src="./assets/icons/pin-icon-black.svg" alt="Pin" class="icon pin-icon">
                         </div>
                     </div>
                     <div class="card">
@@ -114,9 +116,9 @@
                             A conceptual operating system where every process vibrates at its own frequency and harmonizes with others. Less about multitasking, more about orchestration-think symphony, not scheduler.
                         </div>
                         <div class="options">
-                            <img src="./assets/icons/star-icon.svg" alt="Add to favorites" class="icon">
-                            <img src="./assets/icons/eye-icon.svg" alt="Watch" class="icon">
-                            <img src="./assets/icons/pin-icon.svg" alt="Pin" class="icon">
+                            <img src="./assets/icons/star-icon-black.svg" alt="Add to favorites" class="icon star-icon">
+                            <img src="./assets/icons/eye-icon-black.svg" alt="Watch" class="icon eye-icon">
+                            <img src="./assets/icons/pin-icon-black.svg" alt="Pin" class="icon pin-icon">
                         </div>
                     </div>
                     <div class="card">
@@ -125,9 +127,9 @@
                             A peer-to-peer framework envisioned to cover the planet without cables. Elegant, ambitious, and tragically underfunded-just like the tower. Still, it connects your apps as if the dream had worked.
                         </div>
                         <div class="options">
-                            <img src="./assets/icons/star-icon.svg" alt="Add to favorites" class="icon">
-                            <img src="./assets/icons/eye-icon.svg" alt="Watch" class="icon">
-                            <img src="./assets/icons/pin-icon.svg" alt="Pin" class="icon">
+                            <img src="./assets/icons/star-icon-black.svg" alt="Add to favorites" class="icon star-icon">
+                            <img src="./assets/icons/eye-icon-black.svg" alt="Watch" class="icon eye-icon">
+                            <img src="./assets/icons/pin-icon-black.svg" alt="Pin" class="icon pin-icon">
                         </div>
                     </div>
                     <div class="card">
@@ -136,9 +138,9 @@
                             A lightweight reactive framework where current flow drives state updates. Minimal syntax, maximal energy. Developers say it's fast; physicists say it violates conservation laws. Both are probably right.
                         </div>
                         <div class="options">
-                            <img src="./assets/icons/star-icon.svg" alt="Add to favorites" class="icon">
-                            <img src="./assets/icons/eye-icon.svg" alt="Watch" class="icon">
-                            <img src="./assets/icons/pin-icon.svg" alt="Pin" class="icon">
+                            <img src="./assets/icons/star-icon-black.svg" alt="Add to favorites" class="icon star-icon">
+                            <img src="./assets/icons/eye-icon-black.svg" alt="Watch" class="icon eye-icon">
+                            <img src="./assets/icons/pin-icon-black.svg" alt="Pin" class="icon pin-icon">
                         </div>
                     </div>
                     <div class="card">
@@ -147,9 +149,9 @@
                             A glowing front-end theme pack inspired by turn-of-the-century electric fairs. Perfect for dashboards that want to look futuristic and retro simultaneously, without needing actual gas-discharge tubes.
                         </div>
                         <div class="options">
-                            <img src="./assets/icons/star-icon.svg" alt="Add to favorites" class="icon">
-                            <img src="./assets/icons/eye-icon.svg" alt="Watch" class="icon">
-                            <img src="./assets/icons/pin-icon.svg" alt="Pin" class="icon">
+                            <img src="./assets/icons/star-icon-black.svg" alt="Add to favorites" class="icon star-icon">
+                            <img src="./assets/icons/eye-icon-black.svg" alt="Watch" class="icon eye-icon">
+                            <img src="./assets/icons/pin-icon-black.svg" alt="Pin" class="icon pin-icon">
                         </div>
                     </div>
                 </div>
