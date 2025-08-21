@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Regular.woff2') format('woff2'),
+         url('./assets/fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --system-ui: system-ui, 
                  "Segoe UI", 
@@ -12,10 +21,14 @@
     --primary-color: #459cce;
     --primary-color-hover: #6ab3dd;
     --secondary-color: #e6c844;
+    --font-color: #202020;
+    --lighter-font-color: #3b3b3b;
 }
 
 body {
-    font-family: var(--system-ui);
+    font-family: 'Roboto', var(--system-ui);
+    letter-spacing: 0.2px;
+    color: var(--font-color);
 }
 
 .container {
@@ -80,10 +93,9 @@ body {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
     background-color: #fff;
-    color: #353535;
     box-shadow: 0 4px 5px #d8d8d8;
     z-index: 1;
-    padding: 8px 64px 8px 64px;
+    padding: 8px 64px 16px 64px;
     text-wrap: nowrap;
 }
 
@@ -116,16 +128,16 @@ body {
     }
 
     .user-name {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         font-weight: 600;
         padding: 0 16px;
+        justify-self: start;
     }
 }
 
 .user-image {
     border-radius: 50%;
     border: 2px solid rgba(60, 60, 60, 0.25);
-    /* border: 3px solid var(--secondary-color); */
 }
 
 #user-info {
@@ -135,7 +147,7 @@ body {
     grid-template-columns: 90px 1fr;
     grid-template-rows: 40px 40px 20px;
     align-items: center;
-    gap: 0 16px;
+    gap: 0 24px;
     position: relative;
     background-color: inherit;
 
@@ -152,6 +164,7 @@ body {
 
     .status {
         font-size: 0.9rem;
+        color: var(--lighter-font-color);
     }
 
     .text {
@@ -175,6 +188,7 @@ body {
     align-items: center;
     justify-items: center;
     justify-content: end;
+    padding-top: 24px;
 
     button {
         border-radius: 32px;
@@ -229,8 +243,13 @@ body {
         border-left: 8px solid var(--secondary-color);
 
         .project-name {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             font-weight: 600;
+        }
+
+        .description {
+            color: var(--lighter-font-color);
+            font-size: 1rem;
         }
 
         .options {
@@ -270,6 +289,7 @@ body {
 
         .text {
             font-size: 0.9rem;
+            color: var(--lighter-font-color);
         }
     }    
 
@@ -313,12 +333,13 @@ body {
         }
 
         .nickname {
-            font-weight: 500;
+            font-weight: 600;
             align-self: end;
         }
 
         .featured-project {
             align-self: start;
+            color: var(--lighter-font-color);
         }
     }
 }
@@ -332,19 +353,23 @@ body {
 /* === Temporary: === */
 * {
     /* border: 2px solid red; */
-
-    /* #header, #main-content {
-        background-color: #353535 !important;
-        color: aliceblue !important;
-    }
-
-    #main-content .card,
-    #projects .content,
-    #trending .content,
-    #announcements .content,
-    .search-bar {
-        background-color: #525252 !important;
-        color: aliceblue !important;
-    } */
 }
+
+/* #header, #main-content {
+    background-color: #353535 !important;
+}
+
+#main-content .card,
+#projects .content,
+#trending .content,
+#announcements .content,
+.search-bar {
+    background-color: #525252 !important;
+}
+
+:root {
+    --font-color: #fff !important;
+    --lighter-font-color: #dddddd !important;
+} */
+
 /* ==== */
